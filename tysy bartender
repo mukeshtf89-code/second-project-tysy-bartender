@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tipsy Bartender | Premium Bartending & Bar Services – </title>
+  <meta name="description" content="Tipsy Bartender – professional bartending brand in Delhi. Signature cocktails, mocktails and full bar setups for parties, weddings & events." />
+
+  <style>
+    :root {
+      --primary: #ffb347;
+      --primary-dark: #ff914d;
+      --bg: #050509;
+      --bg-alt: #0b0d16;
+      --text: #f9fafb;
+      --muted: #a0a3b1;
+      --radius-lg: 18px;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+      --max-width: 1180px;
+      --transition: 0.25s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #171827 0, #050509 55%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    img { max-width: 100%; display: block; }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    section { padding: 64px 0; }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .section-title h2 {
+      font-size: 2rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .section-title p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(12px);
+      background: rgba(5, 5, 11, 0.92);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 14px;
+      background: radial-gradient(circle at 20% 0%, #fff9e6, #ffb347 35%, #ff5f6d 80%, #150b1a 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #180b0b;
+    }
+
+    .logo-text {
+      line-height: 1.1;
+      display: flex;
+      flex-direction: column;
+    }
+    .logo-text span:first-child {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .logo-text span:last-child {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: var(--muted);
+      letter-spacing: 0.14em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+    .nav-links a {
+      position: relative;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), #ff5f6d);
+      transition: width var(--transition);
+    }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .btn {
+      border-radius: 999px;
+      border: none;
+      padding: 9px 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), #ff5f6d);
+      color: #190c05;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.85);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: var(--text);
+    }
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text);
+    }
+    .nav-toggle span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--text);
+      margin: 4px 0;
+      transition: var(--transition);
+    }
+
+    /* Hero */
+    .hero {
+      height: 80vh;
+      min-height: 520px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      color: #ffffff;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("icecube-bar-banner.jpg"); /* replace with your AI banner image */
+      background-size: cover;
+      background-position: center right;
+      filter: brightness(0.7);
+      transform: scale(1.02);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(5, 5, 10, 0.92), rgba(5, 5, 10, 0.4), rgba(5, 5, 10, 0.15));
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 16px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
+      gap: 32px;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 4vw, 3.1rem);
+      line-height: 1.08;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(135deg, #ffe8c3, #ffb347, #ff5f6d);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      max-width: 520px;
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .hero-meta span::before {
+      content: "•";
+      color: var(--primary);
+      margin-right: 6px;
+    }
+
+    .hero-card {
+      backdrop-filter: blur(18px);
+      background: radial-gradient(circle at top left, rgba(255, 179, 71, 0.18), rgba(5, 5, 10, 0.96));
+      border-radius: 22px;
+      padding: 18px 18px 20px;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      box-shadow: var(--shadow);
+      font-size: 0.9rem;
+    }
+    .hero-card h3 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #ffe8c3;
