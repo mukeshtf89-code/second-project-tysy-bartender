@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tipsy Bartender | Premium Bartending & Bar Services – </title>
-  <meta name="description" content="Tipsy Bartender – professional bartending brand in Delhi. Signature cocktails, mocktails and full bar setups for parties, weddings & events." />
+  <title>Tipsy Bartender | Premium Bartending & Bar Services – Najafgarh, Delhi</title>
+  <meta name="description" content="Tipsy Bartender – professional bartending brand in Delhi NCR based at Ganpati Enclave, Najafgarh. Signature cocktails, mocktails and full bar setups for parties, weddings & events." />
 
   <style>
     :root {
@@ -291,3 +291,797 @@
       text-transform: uppercase;
       letter-spacing: 0.16em;
       color: #ffe8c3;
+      margin-bottom: 8px;
+    }
+    .hero-card p {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+    }
+    .hero-pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 6px;
+    }
+    .pill {
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(0, 0, 0, 0.45);
+    }
+
+    /* About */
+    .about {
+      background: radial-gradient(circle at top, rgba(255, 145, 77, 0.14), #050509 60%);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 36px;
+      align-items: flex-start;
+    }
+    .about-text p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 14px;
+    }
+    .about-list {
+      list-style: none;
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px 18px;
+      font-size: 0.9rem;
+    }
+    .about-list li {
+      position: relative;
+      padding-left: 18px;
+    }
+    .about-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), #ff5f6d);
+    }
+
+    .about-card {
+      background: radial-gradient(circle at top left, rgba(255, 145, 77, 0.25), rgba(7, 7, 14, 0.98));
+      border-radius: 22px;
+      padding: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: var(--shadow);
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+    .about-card strong {
+      color: #ffe8c3;
+    }
+    .about-tagline {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-bottom: 6px;
+      color: var(--primary);
+    }
+
+    /* Services */
+    .services {
+      background: radial-gradient(circle at center, #050509 0, #050509 65%, #0a0a15 100%);
+    }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .service-card {
+      background: rgba(8, 9, 18, 0.96);
+      border-radius: 18px;
+      padding: 16px 16px 18px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.9rem;
+    }
+    .service-card h3 {
+      margin-bottom: 6px;
+      font-size: 1rem;
+    }
+    .service-card p {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    /* Event types */
+    .event-strip {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      font-size: 0.78rem;
+    }
+    .event-pill {
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--muted);
+    }
+
+    /* Gallery */
+    .gallery {
+      background: radial-gradient(circle at top, rgba(255, 145, 77, 0.14), #050509 60%);
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .gallery-item {
+      border-radius: 18px;
+      overflow: hidden;
+      position: relative;
+      background: #111;
+    }
+    .gallery-item::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent 55%);
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+    .gallery-item:hover::after { opacity: 1; }
+    .gallery-caption {
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    /* Process section */
+    .process {
+      background: radial-gradient(circle at center, #050509 0, #050509 60%, #050509 100%);
+    }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      font-size: 0.86rem;
+    }
+    .step {
+      background: rgba(8, 9, 18, 0.96);
+      border-radius: 18px;
+      padding: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--muted);
+    }
+    .step-number {
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--primary), #ff5f6d);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #150b0b;
+      margin-bottom: 8px;
+    }
+    .step h3 {
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+      color: #fdf5e7;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      background: radial-gradient(circle at top, rgba(255, 145, 77, 0.14), #050509 60%);
+    }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .testimonial {
+      background: rgba(8, 9, 18, 0.96);
+      border-radius: 18px;
+      padding: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+    .stars {
+      color: #ffd66b;
+      font-size: 0.8rem;
+      margin-bottom: 6px;
+    }
+    .testimonial-name {
+      font-size: 0.8rem;
+      margin-top: 6px;
+    }
+
+    /* Contact / Enquiry */
+    .contact {
+      background: radial-gradient(circle at center, rgba(255, 95, 109, 0.16), #050509 70%);
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 30px;
+      align-items: flex-start;
+    }
+    .contact-form {
+      background: rgba(8, 9, 18, 0.98);
+      border-radius: 22px;
+      padding: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      box-shadow: var(--shadow);
+      font-size: 0.86rem;
+    }
+    .contact-form h3 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .form-group {
+      margin-bottom: 12px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 9px 10px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(3, 5, 12, 0.9);
+      color: var(--text);
+      font-size: 0.85rem;
+      outline: none;
+    }
+    .form-group textarea { resize: vertical; min-height: 80px; }
+
+    .contact-info {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .contact-info h3 {
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+    .contact-line {
+      margin-bottom: 10px;
+    }
+    .contact-line strong {
+      color: #ffe8c3;
+    }
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .map-frame {
+      margin-top: 14px;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: #000;
+    }
+
+    footer {
+      padding: 18px 0 24px;
+      background: #04040a;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        padding-top: 80px;
+      }
+      .hero {
+        height: auto;
+        padding: 80px 0 60px;
+      }
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .process-steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .testimonial-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 700px) {
+      .nav-links {
+        position: absolute;
+        inset: 54px 16px auto 16px;
+        background: rgba(4, 4, 10, 0.98);
+        border-radius: 16px;
+        padding: 12px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        display: none;
+      }
+      .nav-links.open { display: flex; }
+
+      .nav-toggle { display: block; }
+
+      section { padding: 52px 0; }
+
+      .service-grid,
+      .gallery-grid,
+      .process-steps,
+      .testimonial-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="logo">
+      <div class="logo-mark">TB</div>
+      <div class="logo-text">
+        <span>Tipsy Bartender</span>
+        <span>Mixology · Najafgarh</span>
+      </div>
+    </div>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#process">How It Works</a>
+      <a href="#contact">Enquiry</a>
+      <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        Book Bartenders
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-eyebrow">Ganpati Enclave · Najafgarh · Delhi</div>
+        <h1>
+          <span>Tipsy Bartender</span><br />
+          Premium Bartending & Cocktail Experience
+        </h1>
+        <p>
+          Professional mixology team based in Najafgarh, serving Delhi & NCR with signature cocktails,
+          mocktails and full-service bar setups for house parties, weddings and corporate events.
+        </p>
+
+        <div class="hero-ctas">
+          <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+            Get Event Quote
+          </button>
+          <a href="#services" class="btn btn-outline">View Services</a>
+        </div>
+
+        <div class="hero-meta">
+          <span>Over 20+ years of bartending expertise*</span>
+          <span>Signature cocktails & curated mocktails</span>
+          <span>Event bar setups · Delhi NCR</span>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="Quick highlights">
+        <h3>Raise the Bar at Your Next Event</h3>
+        <p>
+          From intimate home parties to large weddings, our bartenders arrive with the tools, recipes
+          and energy to keep every guest engaged and every glass exciting.
+        </p>
+        <div class="hero-pill-list">
+          <span class="pill">Live Flair & Mixology</span>
+          <span class="pill">Custom Cocktail Menus</span>
+          <span class="pill">All-In Bar Setup Options</span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-text">
+        <div class="section-title" style="text-align:left;">
+          <h2>About Tipsy Bartender</h2>
+          <p>More than a bar – a complete mixology brand based in Najafgarh.</p>
+        </div>
+        <p>
+          Tipsy Bartender is a professional bartending & mixology brand operating from Ganpati Enclave,
+          Paprawat Road, Najafgarh. We specialise in crafting original cocktails and mocktails, using
+          fresh seasonal ingredients and modern bar techniques to deliver a premium drinking experience
+          at any venue.
+        </p>
+        <p>
+          Whether you run a restaurant, manage an event venue, or host private gatherings, we help you
+          offer a bar experience that feels premium, smooth and seamlessly managed.
+        </p>
+
+        <ul class="about-list">
+          <li>Signature cocktail & mocktail design</li>
+          <li>Trained, uniformed professional bartenders</li>
+          <li>Mobile bar setups for any location</li>
+          <li>Delhi NCR coverage with Najafgarh base</li>
+        </ul>
+      </div>
+
+      <aside class="about-card">
+        <div class="about-tagline">Why Hosts Choose Us</div>
+        <p>
+          <strong>Consistent quality:</strong> measured pours, balanced flavours and hygienic bar
+          practices for every guest, every time.
+        </p>
+        <p>
+          <strong>Flexible formats:</strong> from dry bar service (only manpower) to complete cocktail
+          bar solutions with ingredients, glassware and garnish.
+        </p>
+        <p>
+          <strong>Event-ready team:</strong> we handle the bar so you can focus on your guests, show,
+          ceremony or business.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Services We Pour</h2>
+        <p>Pick the format that fits your night – or mix and match.</p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <h3>Professional Bartenders</h3>
+          <p>
+            Trained bartenders for restaurants, lounges, cafes and private events. Our team handles
+            drink prep, garnishing, glass service and guest interaction.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <h3>Cocktail & Mocktail Bar</h3>
+          <p>
+            Curated cocktail and mocktail menus designed around your theme – from classic recipes to
+            unique signatures built only for your event.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <h3>Complete Bar Setup</h3>
+          <p>
+            Portable bar counters, bar tools, ice, glassware and garnish. Ideal for destination
+            weddings, farmhouse parties or corporate offsites.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <h3>Restaurant & Lounge Support</h3>
+          <p>
+            Long-term bartending support, menu development and bar SOP guidance for outlets in and
+            around Najafgarh & Dwarka belt.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <h3>Themed Bars & Live Counters</h3>
+          <p>
+            Specialised counters – sangria bar, gin bar, shots counter, mocktail zone for family
+            functions and youth events.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <h3>Training & Consulting</h3>
+          <p>
+            Basic bar training and cocktail workshops for restaurants, staff and brand teams looking to
+            upgrade their beverage game.
+          </p>
+        </article>
+      </div>
+
+      <div class="event-strip">
+        <span class="event-pill">House Parties</span>
+        <span class="event-pill">Weddings & Receptions</span>
+        <span class="event-pill">Corporate Events</span>
+        <span class="event-pill">Restaurant Openings</span>
+        <span class="event-pill">Festive & New Year Nights</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-title">
+        <h2>Bar Moments</h2>
+        <p>Use these slots to showcase real event photos and drink shots.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://via.placeholder.com/600x600?text=Signature+Cocktails" alt="Signature cocktail presentation" />
+          <div class="gallery-caption">Signature Cocktails</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://via.placeholder.com/600x600?text=Mocktails" alt="Colourful mocktails" />
+          <div class="gallery-caption">Mocktail Bar</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://via.placeholder.com/600x600?text=Event+Setup" alt="Event bar setup" />
+          <div class="gallery-caption">Event Setup</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://via.placeholder.com/600x600?text=Flair+Bartending" alt="Flair bartending" />
+          <div class="gallery-caption">Flair & Service</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="container">
+      <div class="section-title">
+        <h2>How Booking Works</h2>
+        <p>Simple, clear and event-friendly.</p>
+      </div>
+
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Share Event Details</h3>
+          <p>
+            Tell us the date, timings, location, expected guest count and type of event – house party,
+            wedding, corporate, restaurant, etc.
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Select Service Format</h3>
+          <p>
+            Choose manpower-only bartenders, full bar setup, or a customised cocktail bar solution with
+            menu design and garnish.
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Confirm Menu & Quote</h3>
+          <p>
+            We suggest a tailored menu and share transparent pricing. Once confirmed, we lock your slot
+            and team for the date.
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>We Run the Bar</h3>
+          <p>
+            Our bartenders arrive on time, set up, serve guests throughout the event and wind up the bar
+            in a clean, professional way.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="reviews">
+    <div class="container">
+      <div class="section-title">
+        <h2>Hosts & Guests Speak</h2>
+        <p>Use real Google / Justdial reviews here after launch.</p>
+      </div>
+
+      <div class="testimonial-grid">
+        <article class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>
+            “Fantastic drinks and super professional bartenders. They handled a big crowd smoothly and
+            kept everyone happy.”
+          </p>
+          <div class="testimonial-name">– Party Host</div>
+        </article>
+
+        <article class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>
+            “Loved the cocktail menu and presentation. Guests were constantly complimenting the bar
+            service throughout the night.”
+          </p>
+          <div class="testimonial-name">– Wedding Planner</div>
+        </article>
+
+        <article class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>
+            “Easy to coordinate, on-time setup and clean wrap-up. We’ll definitely call Tipsy Bartender
+            again for future events.”
+          </p>
+          <div class="testimonial-name">– Corporate Client</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-form">
+        <h3>Request a Bartending Quote</h3>
+        <p style="color:var(--muted); font-size:0.86rem; margin-bottom:12px;">
+          Share your event details and we’ll respond with a customised package for your requirements.
+        </p>
+
+        <form>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input id="name" type="text" placeholder="Your full name" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Mobile (WhatsApp)</label>
+              <input id="phone" type="tel" placeholder="+91-" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date">Event Date</label>
+              <input id="date" type="date" />
+            </div>
+            <div class="form-group">
+              <label for="city">City / Area</label>
+              <input id="city" type="text" placeholder="Najafgarh, Dwarka, Gurgaon, etc." />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="guests">Approx. Guests</label>
+              <select id="guests">
+                <option>Up to 50</option>
+                <option>50 – 100</option>
+                <option>100 – 250</option>
+                <option>250+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="type">Event Type</label>
+              <select id="type">
+                <option>House Party</option>
+                <option>Wedding / Reception</option>
+                <option>Corporate Event</option>
+                <option>Restaurant / Lounge Support</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Additional Details</label>
+            <textarea id="message" placeholder="Tell us about your event, timings, preferences, etc."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%; margin-top:4px;">
+            Submit Enquiry
+          </button>
+        </form>
+      </div>
+
+      <aside class="contact-info">
+        <h3>Contact & Location</h3>
+        <p class="contact-line">
+          <strong>Base Address:</strong><br />
+          Ganpati Enclave, RZ 107, Paprawat Road,<br />
+          Old Roshanpura Extension, Najafgarh,<br />
+          New Delhi, Delhi – 110043
+        </p>
+        <p class="contact-line">
+          <strong>Working Hours:</strong><br />
+          Typically operational between 9:00 AM – 9:00 PM (event timings as per booking).
+        </p>
+        <p class="contact-line">
+          <strong>Phone / WhatsApp:</strong><br />
+          +91-XXXXXXXXXX (replace with official contact)
+        </p>
+
+        <div class="contact-actions">
+          <a href="tel:+91XXXXXXXXXX" class="btn btn-outline">Call Now</a>
+          <a href="#" class="btn btn-primary">Chat on WhatsApp</a>
+        </div>
+
+        <div class="map-frame">
+          <!-- Replace this with exact Google Maps embed for RZ 107 Ganpati Enclave -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.2!2d77.0!3d28.61!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2z"
+            width="100%" height="220" style="border:0;" allowfullscreen=""
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>© <span id="year"></span> Tipsy Bartender · All rights reserved.</div>
+    <div class="footer-links">
+      <a href="#hero">Back to top</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Enquiry</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleNav() {
+    const nav = document.getElementById('navLinks');
+    nav.classList.toggle('open');
+  }
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
+
